@@ -1,0 +1,195 @@
+.mobile-nav-panel-wrapper {
+    display: none;
+    background: rgba(0,0,0,.7);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9998;
+    @include transition();
+    transition: visibility 0.3s ease-out 0s;
+    -webkit-transform: translate3d(0, 0, 0);
+
+    @include min-screen($lg-min) {
+        //display: none !important; 
+    }
+}
+
+.mobile-nav-panel {
+    @extend .flex, .flex--column, .flex--nowrap;
+    position: absolute;
+    box-shadow: $default-box-shadow;
+    left: initial;
+    right: 0;
+    width: 300px;
+    background-color: #000;
+    line-height: $small-line-height;
+    color: $default-font-color;
+
+    @include max-screen($xxs-max) {
+        width: 100%;
+    }
+
+    &__scroll {
+        width: 100%;
+        overflow-y: auto;
+        flex: 1;
+    }
+}
+
+.mobile-nav {
+    $this: &;
+
+    font-size: $default-font-size;
+
+
+    &__list {
+        &--guest {
+            background: rgba($key-color-3, 0.04);
+        }
+
+        &--auth {
+            background: rgba($key-color-3, 0.04);
+        }
+    }
+
+    &__item {
+
+        &.is-expanded > a {
+            color: $key-color-1;
+        }
+
+        > a {
+            cursor: pointer;
+            display: block;
+            position: relative;
+            color: $default-font-color;
+            font-weight: $default-font-weight-bold;
+            text-transform: uppercase;
+            padding: 20px;
+            overflow: hidden;
+
+            @include min-screen(361px) {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            @include hover() {
+                color: $key-color-1;
+            }
+
+            &.is-active {
+                //box-shadow: 5px 0 0 -1px $key-color-2 inset;
+                font-weight: $default-font-weight-bold;
+
+                ~ #{$this}__sublist {
+                    background-color: #fff;
+                    //box-shadow: 5px 0 0 -1px $key-color-2 inset;
+                }
+            }
+
+            @include max-screen-height(500px) {
+                padding: 5px 20px;
+            }
+        }
+
+
+        &.has-childs {
+            > a {
+                padding-right: 40px;
+
+                @include min-screen(361px) {
+                    padding-right: 60px;
+                }
+            }
+
+        }
+
+        &:first-child > a {
+            padding-top: 30px;
+        }
+
+        &:last-child > a {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__sublist {
+        display: none;
+    }
+
+    &__subitem {
+        > a {
+            cursor: pointer;
+            display: block;
+            position: relative;
+            color: $heading-color;
+            font-weight: $default-font-weight;
+            padding: 15px 20px;
+            font-size: 15px;
+
+            @include hover() {
+                color: $key-color-1;
+            }
+
+            &.is-active {
+                font-weight: $default-font-weight-bold;
+            }
+
+
+            @include max-screen-height(500px) {
+                padding: 5px 20px;
+            }
+
+            @include min-screen(361px) {
+                padding-left: 45px;
+            }
+        }
+
+        &.is-expanded {
+            > a > .ico {
+                transform: rotate(-135deg) scale(1.3);
+                color: darken($key-color-1, 0);
+            }
+        }
+
+        &.has-childs {
+            > a {
+                padding-right: 40px;
+
+                @include min-screen(361px) {
+                    padding-right: 60px;
+                }
+            }
+
+        }
+
+        #{$this}__sublist {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #{$this}__subitem {
+            > a {
+                padding: 8px 45px;
+                //font-size: 14px;
+
+                @include min-screen(361px) {
+                    padding-left: 60px;
+                }
+            }
+        }
+
+        &:first-child > a {
+            padding-top: 25px;
+        }
+
+        &:last-child > a {
+            padding-bottom: 25px;
+        }
+
+    }
+}
+

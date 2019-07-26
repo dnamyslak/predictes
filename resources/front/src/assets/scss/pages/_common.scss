@@ -1,0 +1,27 @@
+.section {
+	padding: 50px 0;
+
+    @include max-screen($md-max) {
+        padding: 45px 0;
+    }
+    @include max-screen($sm-max) {
+        padding: 40px 0;
+    }
+    @include max-screen($xs-max) {
+        padding: 35px 0;
+    }
+    @include max-screen($xxs-max) {
+        padding: 30px 0;
+    }
+
+    &--background {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: calc(100vh - 93px);
+
+        @include max-screen($md-max) {
+            min-height: calc(100vh - 70px);
+        }
+    }
+}

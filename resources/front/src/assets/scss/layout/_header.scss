@@ -1,0 +1,108 @@
+.top {
+	background-color: #000;
+	padding: 24px 0 0 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 500;
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0);
+	@include transition();
+
+    @include max-screen($md-max) {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+	&__logo {
+		margin-right: 30px;
+		max-width: 200px;
+		padding-bottom: 27px;
+		@include transition();
+
+        @include max-screen($md-max) {
+			padding-bottom: 0;
+            max-width: 115px !important;
+        }
+
+		a {
+			@include hover() {
+				img {
+					opacity: 0.5;
+				}
+			}
+		}
+
+		img {
+			@include transition();
+			width: 100%;
+		}
+	}
+
+
+	&__contact {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		@include max-screen($md-max) {
+			display: none;
+		}
+
+		> a {
+			position: relative;
+			display: flex;
+			color: $key-color-1;
+			font-size: 14px;
+			font-weight: $default-font-weight;
+			margin-left: 50px;
+			@include transition();
+
+			@include hover() {
+				color: lighten($key-color-1, 10%);
+			}
+
+
+			> i {
+				font-size: 16px;
+				color: #a0a0a0;
+				padding-right: 10px;
+			}
+
+			> i.ico-phone {
+				font-size: 20px;
+			}
+
+			> span {
+				position: relative;
+				opacity: 1 !important;
+			}
+
+		}
+
+
+		&--mobile {
+			flex-direction: column;
+			margin-bottom: 30px;
+			align-items: flex-start;
+
+			@include max-screen($md-max) {
+				display: flex;
+			}
+
+			> a {
+				margin-left: 30px;
+				margin-bottom: 10px;
+
+				> i {
+					min-width: 35px;
+				}
+
+				> i.ico-phone {
+					padding-left: 7px;
+				}
+			}
+
+
+		}
+	}
+}

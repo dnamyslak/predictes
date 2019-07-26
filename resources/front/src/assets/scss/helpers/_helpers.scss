@@ -1,0 +1,1295 @@
+//
+// margin, padding generator
+//
+$spacing-values: 10 20 30 40 50;
+@each $size in $spacing-values {
+    .pt-#{$size} {
+        padding-top: #{$size}px !important;
+    }
+    
+    .pr-#{$size} {
+        padding-right: #{$size}px !important;
+    }
+    
+    .pb-#{$size} {
+        padding-bottom: #{$size}px !important;
+    }
+    
+    .pl-#{$size} {
+        padding-left: #{$size}px !important;
+    }
+    
+    .mt-#{$size} {
+        margin-top: #{$size}px !important;
+    }
+    
+    .mr-#{$size} {
+        margin-right: #{$size}px !important;
+    }
+    
+    .mb-#{$size} {
+        margin-bottom: #{$size}px !important;
+    }
+    
+    .ml-#{$size} {
+        margin-left: #{$size}px !important;
+    }
+}
+
+//
+// flex
+//
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &--start-x {
+        justify-content: flex-start;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                justify-content: flex-start;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                justify-content: flex-start;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               justify-content: flex-start;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                justify-content: flex-start;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                justify-content: flex-start;
+            }
+        }
+    }
+    &--center-x {
+        justify-content: center;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                justify-content: center;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                justify-content: center;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               justify-content: center;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                justify-content: center;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                justify-content: center;
+            }
+        }
+    }
+    &--end-x {
+        justify-content: flex-end;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                justify-content: flex-end;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                justify-content: flex-end;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               justify-content: flex-end;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                justify-content: flex-end;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                justify-content: flex-end;
+            }
+        }
+    }
+    &--space-around {
+        justify-content: space-around;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                justify-content: space-around;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                justify-content: space-around;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               justify-content: space-around;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                justify-content: space-around;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                justify-content: space-around;
+            }
+        }
+    }
+    &--space-between {
+        justify-content: space-between;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                justify-content: space-between;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                justify-content: space-between;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               justify-content: space-between;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                justify-content: space-between;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                justify-content: space-between;
+            }
+        }
+    }
+    &--start-y {
+        align-items: flex-start;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                align-items: flex-start;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                align-items: flex-start;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               align-items: flex-start;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                align-items: flex-start;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                align-items: flex-start;
+            }
+        }
+    }
+    &--center-y {
+        align-items: center;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                align-items: center;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                align-items: center;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               align-items: center;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                align-items: center;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                align-items: center;
+            }
+        }
+    }
+    &--end-y {
+        align-items: flex-end;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                align-items: flex-end;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                align-items: flex-end;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               align-items: flex-end;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                align-items: flex-end;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                align-items: flex-end;
+            }
+        }
+    }
+    &--stretch {
+        align-items: stretch;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                align-items: stretch;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                align-items: stretch;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               align-items: stretch;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                align-items: stretch;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                align-items: stretch;
+            }
+        }
+    }
+    &--center {
+        justify-content: center;
+        align-items: center;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    &--inline {
+        display: inline-flex;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                display: inline-flex;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                display: inline-flex;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               display: inline-flex;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                display: inline-flex;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                display: inline-flex;
+            }
+        }
+    }
+    &--nowrap {
+        flex-wrap: nowrap;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                flex-wrap: nowrap;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                flex-wrap: nowrap;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                flex-wrap: nowrap;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                flex-wrap: nowrap;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                flex-wrap: nowrap;
+            }
+        }
+    }
+    &--wrap {
+        flex-wrap: wrap;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                flex-wrap: wrap;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                flex-wrap: wrap;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                flex-wrap: wrap;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                flex-wrap: wrap;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                flex-wrap: wrap;
+            }
+        }
+    }
+    &--row {
+        flex-direction: row;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                flex-direction: row;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                flex-direction: row;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                flex-direction: row;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                flex-direction: row;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                flex-direction: row;
+            }
+        }
+    }
+    &--row-reverse {
+        flex-direction: row-reverse;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                flex-direction: row-reverse;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                flex-direction: row-reverse;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                flex-direction: row-reverse;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                flex-direction: row-reverse;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    &--column {
+        flex-direction: column;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                flex-direction: column;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                flex-direction: column;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                flex-direction: column;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                flex-direction: column;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                flex-direction: column;
+            }
+        }
+    }
+    &--column-reverse {
+        flex-direction: column-reverse;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                flex-direction: column-reverse;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                flex-direction: column-reverse;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                flex-direction: column-reverse;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                flex-direction: column-reverse;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+	&--self-start-y {
+		align-self: flex-start;
+		@include max-screen($xxs-max) {
+            &--xxs {
+                align-self: flex-start;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                align-self: flex-start;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                align-self: flex-start;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                align-self: flex-start;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                align-self: flex-start;
+            }
+        }
+	}
+	&--self-center-y {
+		align-self: center;
+		@include max-screen($xxs-max) {
+            &--xxs {
+                align-self: center;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                align-self: center;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                align-self: center;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                align-self: center;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                align-self: center;
+            }
+        }
+	}
+	&--self-end-y {
+		align-self: flex-end;
+		@include max-screen($xxs-max) {
+            &--xxs {
+                align-self: flex-end;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                align-self: flex-end;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                align-self: flex-end;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                align-self: flex-end;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                align-self: flex-end;
+            }
+        }
+	}
+}
+
+//
+// flex-columns
+//
+.flex-col-1 {
+    &>* {
+        flex-basis: 100%;
+    }
+    @include max-screen($xxs-max) {
+        &--xxs >* {
+            flex-basis: 100% !important;
+        }
+    }
+    @include max-screen($xs-max) {
+        &--xs >* {
+            flex-basis: 100% !important;
+        }
+    }
+    @include max-screen($sm-max) {
+        &--sm >* {
+            flex-basis: 100% !important;
+        }
+    }
+    @include max-screen($md-max) {
+        &--md >* {
+            flex-basis: 100% !important;
+        }
+    }
+    @include min-screen($lg-min) {
+        &--lg >* {
+            flex-basis: 100% !important;
+        }
+    }
+}
+.flex-col-2 {
+    &>* {
+        flex-basis: 50%;
+    }
+    @include max-screen($xxs-max) {
+        &--xxs >* {
+            flex-basis: 50% !important;
+        }
+    }
+    @include max-screen($xs-max) {
+        &--xs >* {
+            flex-basis: 50% !important;
+        }
+    }
+    @include max-screen($sm-max) {
+        &--sm >* {
+            flex-basis: 50% !important;
+        }
+    }
+    @include max-screen($md-max) {
+        &--md >* {
+            flex-basis: 50% !important;
+        }
+    }
+    @include min-screen($lg-min) {
+        &--lg >* {
+            flex-basis: 50% !important;
+        }
+    }
+}
+.flex-col-3 {
+    &>* {
+        flex-basis: 33.33%;
+    }
+    @include max-screen($xxs-max) {
+        &--xxs >* {
+            flex-basis: 33.33% !important;
+        }
+    }
+    @include max-screen($xs-max) {
+        &--xs >* {
+            flex-basis: 33.33% !important;
+        }
+    }
+    @include max-screen($sm-max) {
+        &--sm >* {
+            flex-basis: 33.33% !important;
+        }
+    }
+    @include max-screen($md-max) {
+        &--md >* {
+            flex-basis: 33.33% !important;
+        }
+    }
+    @include min-screen($lg-min) {
+        &--lg >* {
+            flex-basis: 33.33% !important;
+        }
+    }
+}
+.flex-col-4 {
+    &>* {
+        flex-basis: 25%;
+    }
+    @include max-screen($xxs-max) {
+        &--xxs >* {
+            flex-basis: 25% !important;
+        }
+    }
+    @include max-screen($xs-max) {
+        &--xs >* {
+            flex-basis: 25% !important;
+        }
+    }
+    @include max-screen($sm-max) {
+        &--sm >* {
+            flex-basis: 25% !important;
+        }
+    }
+    @include max-screen($md-max) {
+        &--md >* {
+            flex-basis: 25% !important;
+        }
+    }
+    @include min-screen($lg-min) {
+        &--lg >* {
+            flex-basis: 25% !important;
+        }
+    }
+}
+
+//
+// orders
+//
+.order-1 {
+    order:-1;
+    // 0 - XXS only
+    @include max-screen($xxs-max) {
+        &--xxs {
+            order:-1;
+        }
+    }
+    // XS and lower
+    @include max-screen($xs-max) {
+        &--xs {
+            order:-1;
+        }
+    }
+    // SM only
+    @include max-screen($sm-max) {
+        &--sm {
+            order:-1;
+        }
+    }
+    // MD and lower
+    @include max-screen($md-max) {
+        &--md {
+            order:-1;
+        }
+    }
+    // LG and higher
+    @include min-screen($lg-min) {
+        &--lg {
+            order:-1;
+        }
+    }
+}
+.order-2 {
+    order:0;
+    // 0 - XXS only
+    @include max-screen($xxs-max) {
+        &--xxs {
+            order:0;
+        }
+    }
+    // XS and lower
+    @include max-screen($xs-max) {
+        &--xs {
+            order:0;
+        }
+    }
+    // SM and lower
+    @include max-screen($sm-max) {
+        &--sm {
+            order:0;
+        }
+    }
+    // MD and lower
+    @include max-screen($md-max) {
+        &--md {
+            order:0;
+        }
+    }
+    // LG and higher
+    @include min-screen($lg-min) {
+        &--lg {
+            order:0;
+        }
+    }
+}
+
+.order-3 {
+    order:1;
+    // 0 - XXS only
+    @include max-screen($xxs-max) {
+        &--xxs {
+            order:1;
+        }
+    }
+    // XS and lower
+    @include max-screen($xs-max) {
+        &--xs {
+            order:1;
+        }
+    }
+    // SM and lower
+    @include max-screen($sm-max) {
+        &--sm {
+            order:1;
+        }
+    }
+    // MD and lower
+    @include max-screen($md-max) {
+        &--md {
+            order:1;
+        }
+    }
+    // LG and higher
+    @include min-screen($lg-min) {
+        &--lg {
+            order:1;
+        }
+    }
+}
+
+.order-last {
+    order:99;
+    // 0 - XXS only
+    @include max-screen($xxs-max) {
+        &--xxs {
+            order:99;
+        }
+    }
+    // XS and lower
+    @include max-screen($xs-max) {
+        &--xs {
+            order:99;
+        }
+    }
+    // SM and lower
+    @include max-screen($sm-max) {
+        &--sm {
+            order:99;
+        }
+    }
+    // MD and lower
+    @include max-screen($md-max) {
+        &--md {
+            order:99;
+        }
+    }
+    // LG and higher
+    @include min-screen($lg-min) {
+        &--lg {
+            order:99;
+        }
+    }
+}
+
+//
+// display block
+//
+
+.block {
+    display: block;
+
+    @include max-screen($xxs-max) {
+        &--xxs {
+            display: block;
+        }
+    }
+    @include max-screen($xs-max) {
+        &--xs {
+            display: block;
+        }
+    }
+    @include max-screen($sm-max) {
+        &--sm {
+           display: block;
+        }
+    }
+    @include max-screen($md-max) {
+        &--md {
+            display: block;
+        }
+    }
+    @include max-screen($lg-max) {
+        &--lg {
+            display: block;
+        }
+    }
+}
+
+//
+// visible/hidden
+//
+.hidden {
+    display: none !important;
+}
+
+// 0 - XXS only
+@include max-screen($xxs-max) {
+    .visible-xxs {
+        display: block !important;
+    }
+
+    .visible-inline-xxs {
+        display: inline !important;
+    }
+
+    .hidden-xxs {
+        display: none !important;
+    }
+}
+
+// XS and lower
+@include max-screen($xs-max) {
+    .visible-xs {
+        display: block !important;
+    }
+
+    .visible-inline-xs {
+        display: inline !important;
+    }
+
+    .hidden-xs {
+        display: none !important;
+    }
+}
+
+// SM and lower
+@include max-screen($sm-max) {
+    .visible-sm {
+        display: block !important;
+    }
+
+    .visible-inline-sm {
+        display: inline !important;
+    }
+
+    .hidden-sm {
+        display: none !important;
+    }
+}
+
+
+// MD and lower
+@include max-screen($md-max) {
+    .visible-md {
+        display: block !important;
+    }
+
+    .visible-inline-md {
+        display: inline !important;
+    }
+
+    .hidden-md {
+        display: none !important;
+    }
+}
+
+// LG and higher
+@include min-screen($lg-min) {
+    .visible-lg {
+        display: block !important;
+    }
+
+    .visible-inline-lg {
+        display: inline !important;
+    }
+
+    .hidden-lg {
+        display: none !important;
+    }
+}
+
+
+//
+// text aligns
+//
+.text-left {
+    text-align: left;
+    // 0 - XXS only
+    @include max-screen($xxs-max) {
+        &--xxs {
+            text-align: left;
+        }
+    }
+    // XS and lower
+    @include max-screen($xs-max) {
+        &--xs {
+            text-align: left;
+        }
+    }
+    // SM and lower
+    @include max-screen($sm-max) {
+        &--sm {
+            text-align: left;
+        }
+    }
+    // MD and lower
+    @include max-screen($md-max) {
+        &--md {
+            text-align: left;
+        }
+    }
+    // LG and higher
+    @include min-screen($lg-min) {
+        &--lg {
+            text-align: left;
+        }
+    }
+}
+
+.text-center {
+    text-align: center;
+    // 0 - XXS only
+    @include max-screen($xxs-max) {
+        &--xxs {
+            text-align: center;
+        }
+    }
+    // XS and lower
+    @include max-screen($xs-max) {
+        &--xs {
+            text-align: center;
+        }
+    }
+    // SM and lower
+    @include max-screen($sm-max) {
+        &--sm {
+            text-align: center;
+        }
+    }
+    // MD and lower
+    @include max-screen($md-max) {
+        &--md {
+            text-align: center;
+        }
+    }
+    // LG and higher
+    @include min-screen($lg-min) {
+        &--lg {
+            text-align: center;
+        }
+    }
+}
+
+.text-right {
+    text-align: right;
+    // 0 - XXS only
+    @include max-screen($xxs-max) {
+        &--xxs {
+            text-align: right;
+        }
+    }
+    // XS and lower
+    @include max-screen($xs-max) {
+        &--xs {
+            text-align: right;
+        }
+    }
+    // SM and lower
+    @include max-screen($sm-max) {
+        &--sm {
+            text-align: right;
+        }
+    }
+    // MD and lower
+    @include max-screen($md-max) {
+        &--md {
+            text-align: right;
+        }
+    }
+    // LG and higher
+    @include min-screen($lg-min) {
+        &--lg {
+            text-align: right;
+        }
+    }
+}
+
+//
+// positions
+//
+.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.relative {
+	position: relative;
+}
+
+//
+// clears
+//
+.padding-clear {
+    padding: 0 !important;
+}
+
+.margin-clear {
+    margin: 0 !important;
+}
+
+.cmt {
+	margin-top: 0 !important;
+}
+
+.cmr {
+	margin-right: 0 !important;
+}
+
+.cmb {
+	margin-bottom: 0 !important;
+}
+
+.cml {
+	margin-left: 0 !important;
+}
+
+.cpt {
+	padding-top: 0 !important;
+}
+
+.cpr {
+	padding-right: 0 !important;
+}
+
+.cpb {
+	padding-bottom: 0 !important;
+}
+
+.cpl {
+	padding-left: 0 !important;
+}
+
+//
+// clearfix
+//
+.clearfix {
+    @extend %clearfix;
+}
+
+//
+// max width limiter
+//
+.max-width-limiter {
+    max-width: $max-width-limiter;
+    margin: 0 auto;
+}
+
+//
+// disabled scroll
+//
+.disabled-scroll {
+    @extend %disabled-scroll;
+}
+
+.disabled {
+	@extend %disabled;
+	
+	&--opacity {
+		opacity: .5;
+	}
+}
+
+//
+// embed
+//
+.embed-responsive {
+	position: relative;
+	display: block;
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	border: 0;
+}
+
+.embed-responsive--16by9 {
+	padding-bottom: 56.25%;
+}
+
+.embed-responsive--4by3 {
+	padding-bottom: 75%;
+}
+
+//
+// responsive table
+//
+.table-responsive {
+	overflow-x: auto;
+	min-height: 0.01%;
+
+	@include max-screen($xs-max) {
+		width: 100%;
+		//margin-bottom: $default-margin-bottom;
+		overflow-y: hidden;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		border: 1px solid $border-color;
+	}
+
+	table {
+		@include max-screen($xs-max) {
+			min-width: 500px;
+		}
+	}
+}
+
+//
+// preloaders
+//
+*[data-preload] {
+	visibility: hidden;
+
+	&.is-loaded {
+		visibility: visible;
+	}
+}
+
+*[data-preloader] {
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+
+	@include max-screen($sm-max) {
+		height: 400px;
+	}
+
+	@include max-screen($xs-max) {
+		height: 300px;
+	}
+
+	&::before {
+		@include pseudo;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 100;
+		background: #fff url("../img/preloader.svg") no-repeat center center;
+        background-size: 60px 60px;
+	}
+
+	&.is-loaded {
+		height: auto !important;
+		overflow: visible;
+
+		&::before {
+			display: none;
+		}
+	}
+}
+
+//
+// rwd menu helper
+//
+html.is-menu-open,
+.is-menu-open body {
+	overflow-y: hidden;
+}

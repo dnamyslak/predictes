@@ -1,0 +1,146 @@
+.dropdown {
+    $this: &;
+	position: relative;
+
+	&__trigger {
+        cursor: pointer;
+        
+		@include hover() {
+			color: inherit;
+		}
+        
+        .is-dropdown-open & {
+            color: inherit;
+        }
+	}
+    
+    &__inner {
+        background-color: #fff;
+        border-radius: $default-radius;
+        box-shadow: $default-box-shadow;
+        position: relative;
+
+        @include max-screen($md-max) {
+            background-color: transparent;
+            box-shadow: none;
+            border: none;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+	&__drop {
+        display: block;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 42px;
+		right: -30px;
+		z-index: 100;
+        min-width: 130px;
+        max-width: 260px;  
+		transform: translateY(50px) scale(0.9);
+		@include transition();
+
+
+        @include max-screen($md-max) {
+            position: relative;
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            right: 0;
+            top: 0;
+            transform: translateY(0) scale(1);
+            background-color: #fff;
+            opacity: 1;
+            visibility: visible;
+            display: none;
+
+            .is-dropdown-open & {
+                //display: block;
+                //height: auto;
+                //transform: scale(1);
+            }
+        }
+	}
+
+	&.is-dropdown-open & {
+		&__drop {
+			opacity: 1;
+			visibility: visible;
+            transform: translateY(15px) scale(1);
+		}
+	}
+}
+
+.dropdown-links {
+    font-size: 15px;
+    line-height: $small-line-height;
+    
+    &__list {
+        padding: 0;
+        position: relative;
+        border-radius: $default-radius;
+        overflow: hidden;
+        
+        &::after {
+            @include pseudo;
+            @include transition;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: $key-color-1;
+            height: 4px;
+        }
+    }
+    
+    &__item {
+        /*& + & {
+            border-top: 1px #f0f0f0 solid;
+        }*/
+        
+        a {
+            @extend .flex, .flex--center-y, .flex--nowrap;
+            color: $heading-color;
+            padding: 15px 21px;
+            display: block;
+            
+            @include hover() {
+                color: $key-color-1;
+            }
+            
+            span {
+                width: 20px;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            @include max-screen($md-max) {
+                color: #ffffff;
+                text-align: left;
+            }
+
+
+            &.is-active {
+                color: $key-color-1;
+
+                @include max-screen($md-max) {
+                    color: $key-color-2;
+                }
+            }
+        }
+
+    }
+
+    &__item:first-child {
+        padding-top: 15px;
+    }
+    &__item:last-child {
+        padding-bottom: 20px;
+    }
+}
